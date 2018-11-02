@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     var arrOfBooks = [Model]()
 
     override func viewDidLoad() {
