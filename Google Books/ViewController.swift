@@ -31,8 +31,6 @@ class ViewController: UIViewController {
             do{
                 
                 let json = try JSON(data: data)
-                print(json)
-                
                 let items = json["items"].arrayObject as! [[String:AnyObject]]
                 self.books.append(contentsOf: items)
                 
@@ -70,6 +68,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+
+        }
+        else{
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+
+        }
+    }
 }
 
 
