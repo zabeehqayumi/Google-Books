@@ -13,6 +13,7 @@
 		4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A050A218CC9C600664A5A /* Google_Books.xcdatamodeld */; };
 		4E9A050E218CC9C700664A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A050D218CC9C700664A5A /* Assets.xcassets */; };
 		4E9A0511218CC9C700664A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A050F218CC9C700664A5A /* LaunchScreen.storyboard */; };
+		510DDED394C2F750A449A614 /* Pods_Google_Books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5567F653E8234972B976F /* Pods_Google_Books.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		4E9A050D218CC9C700664A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9A0510218CC9C700664A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9A0512218CC9C700664A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882FFCBD8EF897A26CD9F0D0 /* Pods-Google Books.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Books.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Books/Pods-Google Books.release.xcconfig"; sourceTree = "<group>"; };
+		8EE7C591CF8944E641AF6E2A /* Pods-Google Books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Books.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Books/Pods-Google Books.debug.xcconfig"; sourceTree = "<group>"; };
+		C0E5567F653E8234972B976F /* Pods_Google_Books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510DDED394C2F750A449A614 /* Pods_Google_Books.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4E9A0502218CC9C600664A5A /* Google Books */,
 				4E9A0501218CC9C600664A5A /* Products */,
+				C9C5CFA7E50EDBC9E1E97D5E /* Pods */,
+				BAF8C3AA4D314F7B3E9DAE86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Google Books";
 			sourceTree = "<group>";
 		};
+		BAF8C3AA4D314F7B3E9DAE86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0E5567F653E8234972B976F /* Pods_Google_Books.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9C5CFA7E50EDBC9E1E97D5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EE7C591CF8944E641AF6E2A /* Pods-Google Books.debug.xcconfig */,
+				882FFCBD8EF897A26CD9F0D0 /* Pods-Google Books.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E9A0515218CC9C700664A5A /* Build configuration list for PBXNativeTarget "Google Books" */;
 			buildPhases = (
+				DEBF6157BEA3C4A639369D2C /* [CP] Check Pods Manifest.lock */,
 				4E9A04FC218CC9C600664A5A /* Sources */,
 				4E9A04FD218CC9C600664A5A /* Frameworks */,
 				4E9A04FE218CC9C600664A5A /* Resources */,
+				DA9C6C645574B661D1DD3F4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA9C6C645574B661D1DD3F4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Google Books/Pods-Google Books-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Books/Pods-Google Books-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEBF6157BEA3C4A639369D2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google Books-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E9A04FC218CC9C600664A5A /* Sources */ = {
@@ -284,6 +349,7 @@
 		};
 		4E9A0516218CC9C700664A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE7C591CF8944E641AF6E2A /* Pods-Google Books.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +367,7 @@
 		};
 		4E9A0517218CC9C700664A5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882FFCBD8EF897A26CD9F0D0 /* Pods-Google Books.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
