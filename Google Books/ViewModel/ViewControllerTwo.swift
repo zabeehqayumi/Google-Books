@@ -28,20 +28,24 @@ class ViewControllerTwo: UIViewController {
         self.tableView.reloadData()
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
         self.tableView.reloadData()
-        
+
     }
+    
+    
+    
+    
     @IBAction func deleteButtonPresed(_ sender: Any) {
         
         
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "favorites")
+        defaults.synchronize()
         self.tableView.reloadData()
 
-        
-        
     }
     
 }

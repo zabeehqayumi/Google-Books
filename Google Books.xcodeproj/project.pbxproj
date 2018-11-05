@@ -9,22 +9,19 @@
 /* Begin PBXBuildFile section */
 		4E3D419D218CCFFD00AE71DB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D419C218CCFFD00AE71DB /* Model.swift */; };
 		4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */; };
-		4E3D41A3218CDA0800AE71DB /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A2218CDA0800AE71DB /* TableViewCell1.swift */; };
-		4E3D41A5218D4AC700AE71DB /* TableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A4218D4AC700AE71DB /* TableViewCellTwo.swift */; };
 		4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0503218CC9C600664A5A /* AppDelegate.swift */; };
 		4E9A0506218CC9C600664A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0505218CC9C600664A5A /* ViewController.swift */; };
 		4E9A0509218CC9C600664A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A0507218CC9C600664A5A /* Main.storyboard */; };
 		4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A050A218CC9C600664A5A /* Google_Books.xcdatamodeld */; };
 		4E9A050E218CC9C700664A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A050D218CC9C700664A5A /* Assets.xcassets */; };
 		4E9A0511218CC9C700664A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A050F218CC9C700664A5A /* LaunchScreen.storyboard */; };
+		4EB0EDF62190A5DD00A5F02F /* JsonParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0EDF52190A5DD00A5F02F /* JsonParsing.swift */; };
 		510DDED394C2F750A449A614 /* Pods_Google_Books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5567F653E8234972B976F /* Pods_Google_Books.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E3D419C218CCFFD00AE71DB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
-		4E3D41A2218CDA0800AE71DB /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
-		4E3D41A4218D4AC700AE71DB /* TableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTwo.swift; sourceTree = "<group>"; };
 		4E9A0500218CC9C600664A5A /* Google Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9A0503218CC9C600664A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9A0505218CC9C600664A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +30,7 @@
 		4E9A050D218CC9C700664A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9A0510218CC9C700664A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9A0512218CC9C700664A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB0EDF52190A5DD00A5F02F /* JsonParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParsing.swift; sourceTree = "<group>"; };
 		882FFCBD8EF897A26CD9F0D0 /* Pods-Google Books.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Books.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Books/Pods-Google Books.release.xcconfig"; sourceTree = "<group>"; };
 		8EE7C591CF8944E641AF6E2A /* Pods-Google Books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Books.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Books/Pods-Google Books.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E5567F653E8234972B976F /* Pods_Google_Books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,18 +70,49 @@
 			isa = PBXGroup;
 			children = (
 				4E9A0503218CC9C600664A5A /* AppDelegate.swift */,
-				4E3D419C218CCFFD00AE71DB /* Model.swift */,
-				4E9A0505218CC9C600664A5A /* ViewController.swift */,
-				4E3D41A2218CDA0800AE71DB /* TableViewCell1.swift */,
-				4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */,
-				4E3D41A4218D4AC700AE71DB /* TableViewCellTwo.swift */,
-				4E9A0507218CC9C600664A5A /* Main.storyboard */,
+				4EB0EDF12190A57400A5F02F /* Model */,
+				4EB0EDF22190A59500A5F02F /* ViewModel */,
+				4EB0EDF32190A5A200A5F02F /* View */,
+				4EB0EDF42190A5B800A5F02F /* Worker */,
 				4E9A050D218CC9C700664A5A /* Assets.xcassets */,
 				4E9A050F218CC9C700664A5A /* LaunchScreen.storyboard */,
 				4E9A0512218CC9C700664A5A /* Info.plist */,
 				4E9A050A218CC9C600664A5A /* Google_Books.xcdatamodeld */,
 			);
 			path = "Google Books";
+			sourceTree = "<group>";
+		};
+		4EB0EDF12190A57400A5F02F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E3D419C218CCFFD00AE71DB /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EB0EDF22190A59500A5F02F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E9A0505218CC9C600664A5A /* ViewController.swift */,
+				4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EB0EDF32190A5A200A5F02F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E9A0507218CC9C600664A5A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EB0EDF42190A5B800A5F02F /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0EDF52190A5DD00A5F02F /* JsonParsing.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		BAF8C3AA4D314F7B3E9DAE86 /* Frameworks */ = {
@@ -215,11 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB0EDF62190A5DD00A5F02F /* JsonParsing.swift in Sources */,
 				4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */,
 				4E9A0506218CC9C600664A5A /* ViewController.swift in Sources */,
 				4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */,
-				4E3D41A5218D4AC700AE71DB /* TableViewCellTwo.swift in Sources */,
-				4E3D41A3218CDA0800AE71DB /* TableViewCell1.swift in Sources */,
 				4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */,
 				4E3D419D218CCFFD00AE71DB /* Model.swift in Sources */,
 			);
