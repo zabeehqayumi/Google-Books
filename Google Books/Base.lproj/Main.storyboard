@@ -54,7 +54,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OxR-NU-UCk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Favorite Books" id="m6U-jm-LMz"/>
+                    <navigationItem key="navigationItem" title="Favorite Books" id="m6U-jm-LMz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="dfu-Jp-s07">
+                            <connections>
+                                <action selector="deleteButtonPresed:" destination="SHS-0U-EzI" id="Bob-ym-AJq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Qwt-Sq-xzY" id="dEa-F3-4mq"/>
                     </connections>
