@@ -1,5 +1,5 @@
 //
-//  TableViewCell1.swift
+//  TableViewCellTwo.swift
 //  Google Books
 //
 //  Created by Zabeehullah Qayumi on 11/2/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell1: UITableViewCell {
+class TableViewCellTwo: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

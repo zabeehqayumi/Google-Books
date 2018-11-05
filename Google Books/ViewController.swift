@@ -9,9 +9,24 @@
 import UIKit
 import SwiftyJSON
 
+
+protocol sendFavorite{
+    func sendData(title : String , details : String)
+}
+
+
+
 class ViewController: UIViewController {
     
+    // creating the delegate of protocol
+    
+    var delegate : sendFavorite?
+    
     var books = [[String:AnyObject]]()
+    
+    
+    var globalTitle : String = ""
+    var globalDetails : String = ""
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -59,6 +74,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             cell.detailTextLabel?.text = volumeInfo["subtitle"] as? String
             
         }
+        
+        globalTitle = (cell.textLabel?.text ?? "")
+        globalDetails = (cell.detailTextLabel?.text ?? "")
+        
         return cell
     }
     
@@ -70,14 +89,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
-
         }
         else{
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
 
         }
+        
+        delegate?.sendData(title: globalTitle, details: globalDetails)
+        
     }
 }
 
@@ -91,3 +116,5 @@ extension ViewController: UISearchBarDelegate{
         searchBar.resignFirstResponder()
     }
 }
+
+
