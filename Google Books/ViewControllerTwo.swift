@@ -8,45 +8,43 @@
 
 import UIKit
 
-struct ModelBook{
-    var title : String = ""
-    var details : String = ""
-}
 
-
-
-class ViewControllerTwo: UIViewController, sendFavorite {
+class ViewControllerTwo: UIViewController {
+    
+    
+    var favorites : [String] = []
   
-    
-    var favBooks = [ModelBook]()
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+        if let favoritesDefaults = defaults.object(forKey: "favorites"){
+            favorites = favoritesDefaults as? [String] ?? [""]
+        }
+        
+        self.tableView.reloadData()
 
     }
     
-    // adopting protocol
-    func sendData(title: String, details: String) {
-        favBooks.append(ModelBook(title: title, details: details))
-    }
-
 }
 
 
 extension ViewControllerTwo : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favBooks.count
+        return favorites.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         
-        cell.textLabel?.text = favBooks[indexPath.row].title
-        cell.detailTextLabel?.text = favBooks[indexPath.row].details
+       // cell.textLabel?.text = favBooks[indexPath.row].title
+        cell.textLabel?.text = favorites[indexPath.row]
         
         return cell
     }
+    
+    
 }

@@ -10,17 +10,8 @@ import UIKit
 import SwiftyJSON
 
 
-protocol sendFavorite{
-    func sendData(title : String , details : String)
-}
-
-
-
 class ViewController: UIViewController {
-    
-    // creating the delegate of protocol
-    
-    var delegate : sendFavorite?
+
     
     var books = [[String:AnyObject]]()
     
@@ -89,10 +80,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         tableView.deselectRow(at: indexPath, animated: true)
 
-        
+
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
         }
@@ -100,10 +91,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
 
         }
+
+    }
+    
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        delegate?.sendData(title: globalTitle, details: globalDetails)
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { (action, indexPath) in
+            var favorites : [String] = []
+            let defaults = UserDefaults.standard
+            if let favoritesDefaults = defaults.object(forKey: "favorites"){
+                favorites = favoritesDefaults as! [String]
+            }
+            
+
+            favorites.append(tableView.cellForRow(at: indexPath)?.textLabel!.text ?? "")
+            defaults.set(favorites, forKey: "favorites")
+            defaults.synchronize()
+        }
+        
+       // favorite.backgroundColor = UIColor.yellow
+        return [favorite]
+
         
     }
+    
+    
 }
 
 
