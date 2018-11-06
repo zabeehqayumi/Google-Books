@@ -20,8 +20,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-
-    
     }
 }
 
@@ -49,7 +47,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         }
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

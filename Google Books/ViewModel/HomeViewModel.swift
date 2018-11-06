@@ -38,10 +38,4 @@ class HomeViewModel{
         defaults.set(favorites, forKey: "favorites")
         defaults.synchronize()
     }
-
-    
-    
-    
-    
-    
 }

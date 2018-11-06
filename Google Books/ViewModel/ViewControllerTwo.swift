@@ -35,19 +35,13 @@ class ViewControllerTwo: UIViewController {
 
     }
     
-    
-    
-    
     @IBAction func deleteButtonPresed(_ sender: Any) {
-        
         
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "favorites")
         defaults.synchronize()
         self.tableView.reloadData()
-
     }
-    
 }
 
 
@@ -60,10 +54,8 @@ extension ViewControllerTwo : UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         cell.textLabel?.text = favorites[indexPath.row]
-        
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
