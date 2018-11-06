@@ -16,8 +16,11 @@ protocol HomeViewModelDelegate : class {
 class HomeViewModel{
     
     weak var delegate: HomeViewModelDelegate?
+    
     var books = [[String:AnyObject]]()
+    
     var searchText : String = ""
+    
     func search(for text : String){
         
         JsonParsing.jsonFile(text, onSuccess: { [weak self] books in

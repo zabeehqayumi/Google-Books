@@ -9,8 +9,7 @@
 import UIKit
 
 
-class FavoriteViewControllerTwo: UIViewController {
-    
+class FavoriteViewController: UIViewController {
     
     var favorites : [String] = []
     
@@ -45,7 +44,7 @@ class FavoriteViewControllerTwo: UIViewController {
 }
 
 
-extension FavoriteViewControllerTwo : UITableViewDataSource, UITableViewDelegate{
+extension FavoriteViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count

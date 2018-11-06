@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E3D419D218CCFFD00AE71DB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D419C218CCFFD00AE71DB /* Model.swift */; };
-		4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */; };
+		4E3D41A1218CD3A300AE71DB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A0218CD3A300AE71DB /* FavoriteViewController.swift */; };
 		4E5C787E2191F4FC00DDF92F /* Google_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */; };
 		4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C7885219207AF00DDF92F /* HomeViewModel.swift */; };
 		4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0503218CC9C600664A5A /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		4E3D419C218CCFFD00AE71DB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
+		4E3D41A0218CD3A300AE71DB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4E5C787B2191F4FC00DDF92F /* GoogleBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_BooksTests.swift; sourceTree = "<group>"; };
 		4E5C787F2191F4FC00DDF92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9A0505218CC9C600664A5A /* HomeViewController.swift */,
-				4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */,
+				4E3D41A0218CD3A300AE71DB /* FavoriteViewController.swift */,
 				4E5C7885219207AF00DDF92F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -318,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB0EDF62190A5DD00A5F02F /* JsonParsing.swift in Sources */,
-				4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */,
+				4E3D41A1218CD3A300AE71DB /* FavoriteViewController.swift in Sources */,
 				4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */,
 				4E9A0506218CC9C600664A5A /* HomeViewController.swift in Sources */,
 				4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */,
