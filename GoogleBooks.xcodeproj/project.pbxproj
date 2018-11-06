@@ -10,8 +10,9 @@
 		4E3D419D218CCFFD00AE71DB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D419C218CCFFD00AE71DB /* Model.swift */; };
 		4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */; };
 		4E5C787E2191F4FC00DDF92F /* Google_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */; };
+		4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C7885219207AF00DDF92F /* HomeViewModel.swift */; };
 		4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0503218CC9C600664A5A /* AppDelegate.swift */; };
-		4E9A0506218CC9C600664A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0505218CC9C600664A5A /* ViewController.swift */; };
+		4E9A0506218CC9C600664A5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0505218CC9C600664A5A /* HomeViewController.swift */; };
 		4E9A0509218CC9C600664A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A0507218CC9C600664A5A /* Main.storyboard */; };
 		4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A050A218CC9C600664A5A /* Google_Books.xcdatamodeld */; };
 		4E9A050E218CC9C700664A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A050D218CC9C700664A5A /* Assets.xcassets */; };
@@ -36,9 +37,10 @@
 		4E5C787B2191F4FC00DDF92F /* GoogleBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_BooksTests.swift; sourceTree = "<group>"; };
 		4E5C787F2191F4FC00DDF92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5C7885219207AF00DDF92F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4E9A0500218CC9C600664A5A /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9A0503218CC9C600664A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E9A0505218CC9C600664A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E9A0505218CC9C600664A5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E9A0508218CC9C600664A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E9A050B218CC9C600664A5A /* Google_Books.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Google_Books.xcdatamodel; sourceTree = "<group>"; };
 		4E9A050D218CC9C700664A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,8 +127,9 @@
 		4EB0EDF22190A59500A5F02F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4E9A0505218CC9C600664A5A /* ViewController.swift */,
+				4E9A0505218CC9C600664A5A /* HomeViewController.swift */,
 				4E3D41A0218CD3A300AE71DB /* ViewControllerTwo.swift */,
+				4E5C7885219207AF00DDF92F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,7 +319,8 @@
 			files = (
 				4EB0EDF62190A5DD00A5F02F /* JsonParsing.swift in Sources */,
 				4E3D41A1218CD3A300AE71DB /* ViewControllerTwo.swift in Sources */,
-				4E9A0506218CC9C600664A5A /* ViewController.swift in Sources */,
+				4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */,
+				4E9A0506218CC9C600664A5A /* HomeViewController.swift in Sources */,
 				4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */,
 				4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */,
 				4E3D419D218CCFFD00AE71DB /* Model.swift in Sources */,
