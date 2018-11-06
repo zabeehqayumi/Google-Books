@@ -11,9 +11,10 @@ import SwiftyJSON
 
 
 class ViewController: UIViewController {
-
     
-    var books = [[String:AnyObject]]()
+    var books1 = [[String:AnyObject]]()
+    
+    
     
     
     var globalTitle : String = ""
@@ -26,49 +27,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    
-    func jsonFile(_ booksName : String){
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(booksName)")
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            guard let data = data else {return}
-            
-            do{
-                
-                let json = try JSON(data: data)
-                let items = json["items"].arrayObject as! [[String:AnyObject]]
-                self.books.append(contentsOf: items)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
-            }catch{
-                print(error.localizedDescription)
+        
+        
+        JsonParsing.jsonFile("") {_ in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-            }.resume()
+        }
+        
     }
+
+    
 }
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+        return books1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        if let volumeInfo = self.books[indexPath.row]["volumeInfo"] as? [String:AnyObject]{
+        if let volumeInfo = self.books1[indexPath.row]["volumeInfo"] as? [String:AnyObject]{
             cell.textLabel?.text = volumeInfo["title"] as? String
             cell.detailTextLabel?.text = volumeInfo["subtitle"] as? String
             
         }
-        
-        globalTitle = (cell.textLabel?.text ?? "")
-        globalDetails = (cell.detailTextLabel?.text ?? "")
-        
         return cell
     }
     
@@ -109,9 +94,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             defaults.set(favorites, forKey: "favorites")
             defaults.synchronize()
         }
-        
-       // favorite.backgroundColor = UIColor.yellow
-        
         return [favorite]
 
         
@@ -126,7 +108,14 @@ extension ViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         let bookTitle = searchBar.text!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        self.jsonFile(bookTitle)
+        
+        JsonParsing.jsonFile(bookTitle, onSuccess: { [weak self] book in
+            self?.books1 = book
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        } )
+        //self.jsonFile(bookTitle)
         searchBar.resignFirstResponder()
     }
 }
