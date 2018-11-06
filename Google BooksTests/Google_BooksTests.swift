@@ -8,8 +8,7 @@
 
 import XCTest
 
-@testable import Google_Books
-
+@testable import GoogleBooks
 
 
 class Google_BooksTests: XCTestCase {
@@ -29,7 +28,7 @@ class Google_BooksTests: XCTestCase {
     }
 
     
-    func testValidCallToiTunesGetsHTTPStatusCode200() {
+    func testValidCallToGoogleApi() {
         
         let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=data")
         let promise = expectation(description: "Status code: 200")
