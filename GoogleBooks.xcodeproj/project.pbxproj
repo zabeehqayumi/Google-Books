@@ -11,6 +11,7 @@
 		4E3D41A1218CD3A300AE71DB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D41A0218CD3A300AE71DB /* FavoriteViewController.swift */; };
 		4E5C787E2191F4FC00DDF92F /* Google_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */; };
 		4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C7885219207AF00DDF92F /* HomeViewModel.swift */; };
+		4E5C78882192556000DDF92F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5C78872192556000DDF92F /* FavoritesViewModel.swift */; };
 		4E9A0504218CC9C600664A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0503218CC9C600664A5A /* AppDelegate.swift */; };
 		4E9A0506218CC9C600664A5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A0505218CC9C600664A5A /* HomeViewController.swift */; };
 		4E9A0509218CC9C600664A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A0507218CC9C600664A5A /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		4E5C787D2191F4FC00DDF92F /* Google_BooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_BooksTests.swift; sourceTree = "<group>"; };
 		4E5C787F2191F4FC00DDF92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5C7885219207AF00DDF92F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4E5C78872192556000DDF92F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		4E9A0500218CC9C600664A5A /* GoogleBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9A0503218CC9C600664A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9A0505218CC9C600664A5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4E9A0505218CC9C600664A5A /* HomeViewController.swift */,
 				4E3D41A0218CD3A300AE71DB /* FavoriteViewController.swift */,
 				4E5C7885219207AF00DDF92F /* HomeViewModel.swift */,
+				4E5C78872192556000DDF92F /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				4EB0EDF62190A5DD00A5F02F /* JsonParsing.swift in Sources */,
 				4E3D41A1218CD3A300AE71DB /* FavoriteViewController.swift in Sources */,
+				4E5C78882192556000DDF92F /* FavoritesViewModel.swift in Sources */,
 				4E5C7886219207AF00DDF92F /* HomeViewModel.swift in Sources */,
 				4E9A0506218CC9C600664A5A /* HomeViewController.swift in Sources */,
 				4E9A050C218CC9C600664A5A /* Google_Books.xcdatamodeld in Sources */,

@@ -9,50 +9,37 @@
 import UIKit
 
 
-class FavoriteViewController: UIViewController {
+class FavoriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var favorites : [String] = []
+    let viewModel = FavoritesViewModel()
+
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let defaults = UserDefaults.standard
-        if let favoritesDefaults = defaults.object(forKey: "favorites"){
-            favorites = favoritesDefaults as? [String] ?? [""]
-        }
-        
+        viewModel.fectchingDataFromUserDefautls()
         self.tableView.reloadData()
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        let defaults = UserDefaults.standard
-        defaults.synchronize()
+    viewModel.refreshingData()
         self.tableView.reloadData()
-
+        
     }
     
     @IBAction func deleteButtonPresed(_ sender: Any) {
-        
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: "favorites")
-        defaults.synchronize()
+        viewModel.deletingObjectsFromUserDefaults()
         self.tableView.reloadData()
-    }
 }
-
-
-extension FavoriteViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
+        return viewModel.favorites.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel?.text = favorites[indexPath.row]
+
+        cell.textLabel?.text = viewModel.favorites[indexPath.row]
         return cell
     }
     
@@ -63,14 +50,14 @@ extension FavoriteViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            self.favorites.remove(at: indexPath.row)
+            self.viewModel.favorites.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             
         }
-        
-        
-        
     }
-    
-    
 }
+
+
+
+
+
