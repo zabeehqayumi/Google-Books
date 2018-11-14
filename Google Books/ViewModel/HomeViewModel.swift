@@ -2,12 +2,11 @@
 //  HomeViewModel.swift
 //  GoogleBooks
 //
-//  Created by Zabeehullah Qayumi on 11/6/18.
+//  Created by Zabeehullah Qayumi on 11/13/18.
 //  Copyright © 2018 Zabeehullah Qayumi. All rights reserved.
 //
 
 import Foundation
-
 
 protocol HomeViewModelDelegate : class {
     func booksUpdated()

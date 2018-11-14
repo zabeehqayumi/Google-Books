@@ -1,8 +1,8 @@
 //
-//  FavoritesViewModel.swift
+//  FavoriteViewModel.swift
 //  GoogleBooks
 //
-//  Created by Zabeehullah Qayumi on 11/6/18.
+//  Created by Zabeehullah Qayumi on 11/13/18.
 //  Copyright © 2018 Zabeehullah Qayumi. All rights reserved.
 //
 
@@ -25,14 +25,16 @@ class FavoritesViewModel{
     }
     
     func refreshingData(){
-        let defaults = UserDefaults.standard
-        defaults.synchronize()
+        favorites = []
+        self.fectchingDataFromUserDefautls()
+
     }
     
     func deletingObjectsFromUserDefaults(){
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "favorites")
         defaults.synchronize()
+        favorites.removeAll()
     }
     }
 

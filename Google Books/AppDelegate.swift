@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Google Books
+//  GoogleBooks
 //
-//  Created by Zabeehullah Qayumi on 11/2/18.
+//  Created by Zabeehullah Qayumi on 11/13/18.
 //  Copyright © 2018 Zabeehullah Qayumi. All rights reserved.
 //
 
